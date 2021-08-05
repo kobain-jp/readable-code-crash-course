@@ -25,3 +25,16 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 ```
 
 if junit result shows with green bar, setup is succeeded
+
+### crash course
+
+1. 7.5 Returnning Early from a Function / 関数から早く返す
+
+```
+1.read 7.5 Returnning Early from a Function / 関数から早く返す
+2.Refactor the method:ch7.sec5.StringTest.capitalize
+3.run the junit test case ch7.sec5.StringTest after you refactor it
+```
+
+
+
