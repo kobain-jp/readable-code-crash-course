@@ -28,7 +28,7 @@ if junit result shows with green bar, setup is succeeded
 
 ### crash course
 
-1. 7.5 Returnning Early from a Function / 関数から早く返す
+Week1. 7.5 Returnning Early from a Function / 関数から早く返す
 
 ```
 1.read 'Readable Code' 7.5 Returnning Early from a Function / リーダブルコード 7.5 関数から早く返す
