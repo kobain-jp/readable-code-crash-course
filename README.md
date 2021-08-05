@@ -2,7 +2,7 @@
 
 ### setup your project
 
-1. clone repository by using git
+1. clone repository 
 
 ```
 git clone https://github.com/kobain-jp/readable-code-crash-course.git
