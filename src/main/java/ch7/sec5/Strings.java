@@ -2,11 +2,12 @@ package ch7.sec5;
 
 public final class Strings {
 
-	private Strings() {
+	// TODO2: refactor this constructor after you read effective java 1.4
+	public Strings() {
 
-	}
+	} 
 
-	// TODO: refactor this method after you read Readable Code 7.5
+	// TODO1: refactor this method after you read Readable Code 7.5
 	public static String capitalize(String str) {
 		String ret = str;
 		if (str == null) {
