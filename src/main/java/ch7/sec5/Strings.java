@@ -15,7 +15,7 @@ public final class Strings {
 			ret = str;
 		} else {
 			if (str.length() == 1) {
-				ret = str.substring(0, 1).toUpperCase();
+				ret = str.toUpperCase();
 			} else {
 				ret = str.substring(0, 1).toUpperCase() + str.substring(1);
 			}
