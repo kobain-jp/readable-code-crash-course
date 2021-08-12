@@ -1,6 +1,7 @@
 package ch7.sec5;
 
-public final class Strings {
+// TODO3: add more signature after you read effective java item 17 
+public class Strings {
 
 	// TODO2: refactor this constructor after you read effective java item 4
 	public Strings() {
