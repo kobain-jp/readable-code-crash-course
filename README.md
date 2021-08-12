@@ -35,15 +35,15 @@ Week1. Readable Code 7.5,7.7,9.1 and effective java item 4
 1.about ch7.sec5.Strings and ch7.sec5.StringTest
 
 1min
-2.today's topic Readable Code 7.5,7.7,9.1and effective java item 4
+2.today's topic Readable Code 7.5, 7.7, 9.1 and effective java item 4
 
 14min
 3.fix TODO in ch7.sec5.Strings
-- TODO1 after you read Readable Code 7.5,7.7  and run the junit test case ch7.sec5.StringTest　　　
+- TODO1 after you read Readable Code 7.5,7.7,9.1 and run the junit test case ch7.sec5.StringTest　　　
 - TODO2 after you read effective java item 4 and run the junit test case ch7.sec5.StringTest 
 
 15min
-4.discussion
+4.refactor demo
 
 ```
 
