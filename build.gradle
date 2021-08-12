@@ -9,7 +9,8 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java'
-	id 'eclipse'
+    id 'eclipse'
+    id 'idea'
 }
 
 repositories {
@@ -19,6 +20,11 @@ repositories {
 }
 
 dependencies {
-   testImplementation(platform('org.junit:junit-bom:5.7.2'))
-   testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation(platform('org.junit:junit-bom:5.7.2'))
+    testImplementation('org.junit.jupiter:junit-jupiter:5.7.2')
+    testImplementation('org.hamcrest:hamcrest-core:2.2')
+}
+
+test {
+    useJUnitPlatform()
 }
