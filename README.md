@@ -33,8 +33,9 @@ Week1. 7.5 Returnning Early from a Function / 関数から早く返す
 ```
 
 15min
-1.fix TODO1 after you read Readable Code 7.5 and run the junit test case ch7.sec5.StringTest　　　
-2.fix TODO2 after you read effective java item 4 and run the junit test case ch7.sec5.StringTest 
+1.fix TODO in ch7.sec5.Strings
+- TODO1 after you read Readable Code 7.5 and run the junit test case ch7.sec5.StringTest　　　
+- TODO2 after you read effective java item 4 and run the junit test case ch7.sec5.StringTest 
 
 15min
 1.discussion
