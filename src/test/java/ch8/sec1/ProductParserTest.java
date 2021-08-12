@@ -1,7 +1,5 @@
 package ch8.sec1;
 
-import static org.junit.Assert.fail;
-
 import java.text.ParseException;
 import java.time.LocalDate;
 
