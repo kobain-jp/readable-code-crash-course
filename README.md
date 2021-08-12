@@ -31,9 +31,10 @@ if junit result shows with green bar, setup is succeeded
 Week1. 7.5 Returnning Early from a Function / 関数から早く返す
 
 ```
-1.read 'Readable Code' 7.5 Returnning Early from a Function / リーダブルコード 7.5 関数から早く返す
-2.Refactor the method:ch7.sec5.String.capitalize
-3.run the junit test case ch7.sec5.StringTest after you refactor it
+
+1.fix TODO1 after you read Readable Code 7.5 and run the junit test case ch7.sec5.StringTest
+2.fix TODO2 after you read effective java item 4 and run the junit test case ch7.sec5.StringTest
+
 ```
 
 
