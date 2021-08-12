@@ -28,7 +28,7 @@ if junit result shows with green bar, setup is succeeded
 
 ### crash course
 
-Week1. 7.5 Returnning Early from a Function / 関数から早く返す
+Week1. Readable Code 7.5,7.7,9.1 and effective java item 4
 
 ```
 1min
@@ -39,7 +39,7 @@ Week1. 7.5 Returnning Early from a Function / 関数から早く返す
 
 14min
 3.fix TODO in ch7.sec5.Strings
-- TODO1 after you read Readable Code 7.5 and 7.7 and run the junit test case ch7.sec5.StringTest　　　
+- TODO1 after you read Readable Code 7.5,7.7  and run the junit test case ch7.sec5.StringTest　　　
 - TODO2 after you read effective java item 4 and run the junit test case ch7.sec5.StringTest 
 
 15min
