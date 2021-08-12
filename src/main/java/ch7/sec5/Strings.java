@@ -7,7 +7,7 @@ public final class Strings {
 
 	} 
 
-	// TODO1: refactor this method after you read Readable Code 7.5 and 7.7
+	// TODO1: refactor this method after you read Readable Code 7.5,7.7 and 9.1
 	public static String capitalize(String str) {
 		String ret = str;
 		if (str == null) {
