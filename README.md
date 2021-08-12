@@ -35,7 +35,7 @@ Week1. Readable Code 7.5, 7.7, 9.1 and effective java item 4, 17
 1.about ch7.sec5.Strings and ch7.sec5.StringTest
 
 1min
-2.today's topic Readable Code 7.5, 7.7, 9.1 and effective java item 4
+2.today's topic Readable Code 7.5, 7.7, 9.1 and effective java item 4, 17
 
 13min
 3.fix TODO in ch7.sec5.Strings
