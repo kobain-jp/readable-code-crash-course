@@ -37,7 +37,7 @@ Week1. 7.5 Returnning Early from a Function / 関数から早く返す
 2.fix TODO2 after you read effective java item 4 and run the junit test case ch7.sec5.StringTest 
 
 15min
-
+1.discussion
 
 ```
 
