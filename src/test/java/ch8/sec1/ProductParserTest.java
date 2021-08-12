@@ -21,7 +21,7 @@ class ProductParserTest {
 			Assertions.assertEquals(LocalDate.of(1981, 1, 1), product.releaseDate);
 		} catch (ParseException e) {
 			e.printStackTrace();
-			fail();
+			Assertions.fail();
 		}
 	}
 
