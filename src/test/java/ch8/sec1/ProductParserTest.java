@@ -1,7 +1,5 @@
 package ch8.sec1;
 
-import static org.junit.Assert.fail;
-
 import java.text.ParseException;
 import java.time.LocalDate;
 
@@ -21,7 +19,7 @@ class ProductParserTest {
 			Assertions.assertEquals(LocalDate.of(1981, 1, 1), product.releaseDate);
 		} catch (ParseException e) {
 			e.printStackTrace();
-			fail();
+			Assertions.fail();
 		}
 	}
 
