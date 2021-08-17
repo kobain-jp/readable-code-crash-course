@@ -46,5 +46,39 @@ Week1. Readable Code 7.5, 7.7, 9.1 and effective java item 4, 17
 
 ```
 
+Week2,3. Readable Code 7.5, 7.7, 4.7 2.7 3.0 3.9 9.2 12.2 11.1 and DRY/OAOO principle
+
+```
+Week1
+1min
+1.about ch4.sec7.MarkDownUtils and ch4.sec7.MarkDownUtils
+
+example1
+|COL1|
+|----|
+|    |
+
+example2
+|COL1|COL1|
+|----|----|
+|    |    |
+
+15min
+3.fix TODO 1- 6
+
+10min 
+4.explanation for each point of view and refactor demonstration
+
+week2
+
+15min
+1.fix TODO 6-8
+
+15min
+2.explanation for each point of view and refactor demonstration
+
+
+```
+
 
 
