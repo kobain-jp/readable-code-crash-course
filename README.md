@@ -63,6 +63,8 @@ example2
 |----|----|
 |    |    |
 
+https://www.markdownguide.org/extended-syntax/#tables
+
 15min
 3.fix TODO 1- 6
 
