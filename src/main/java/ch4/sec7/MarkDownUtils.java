@@ -11,7 +11,7 @@ public class MarkDownUtils {
 	// Readable code 4.7
 	// TODO3 : re-name the variables after you read Readable code 2.7
 	// TODO4 : re-name method as it is after you read Readable code 3.0, 3.9
-	//
+	// TODO5 : remove the unnecessary variable after you read Readable code 9.1
 	// week2
 	// TODO6 : use com.google.common.base.Strings to replace your code after you
 	// read Readable code 12.2 and search DRY and OAOO on internet
