@@ -5,7 +5,7 @@ import java.util.List;
 public class MarkDownUtils {
 	// TODO1 : use early return:Readable code 7.5, 7.7 and remove the 1 nest(you might need to change if condition)
 	// * you do not need to improve exception handling
-	// TODO2 : add line break after you read Readable code 4.7
+	// TODO2 : add line break and comment for each block/paragraph after you read Readable code 4.7
 	// TODO3 : re-name the variables after you read Readable code 2.7
 	// TODO4 : re-name method as it is after you read Readable code 3.0, 3.9
 	// TODO5 : move the variables after you read Readable code 9.2(定義の位置を下げる）
