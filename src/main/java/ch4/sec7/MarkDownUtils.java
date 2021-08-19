@@ -5,7 +5,7 @@ import java.util.List;
 public class MarkDownUtils {
 	// week1
 	// TODO1 : use early return:Readable code 7.5, 7.7 and remove the 1 nest(you
-	// might need to change if condition)
+	// might need to change if condition and if condition is complicated such as if(!(...)) please refactor it after you read 7.2)
 	// * you do not need to improve exception handling
 	// TODO2 : add line break and comment for each block/paragraph after you read
 	// Readable code 4.7
