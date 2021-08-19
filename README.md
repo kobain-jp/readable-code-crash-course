@@ -62,6 +62,7 @@ example2
 |COL1|COL1|
 |----|----|
 |    |    |
+|    |    |
 
 https://www.markdownguide.org/extended-syntax/#tables
 
