@@ -16,7 +16,7 @@ public class App {
 
 		// TODO9 : Effective Java Item 58 
 		for (int i = 0; i < employees.size(); i++) {
-			// TODO8 refactor here after you fix todo8 on Employee
+			// TODO9 refactor here after you fix todo9 on Employee
 			Employee employee = (Employee) employees.get(i);
 			System.out.println(employee.printLine());
 		}

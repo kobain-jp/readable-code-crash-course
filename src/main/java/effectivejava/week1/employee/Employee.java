@@ -13,14 +13,15 @@ public class Employee {
 
 	// TODO2 refactor the code to accomplish the followings.
 	// remove mutator for empId,empNo,empNm,entryDate not allow change value except
-	// when creating instance
+	// when creating instance and change this class name to emphasize your design
 	// TODO3 force developer not to extend this class
 	// Effective Java Item 17
 
-	// TODO8 : Effective java Item12
+	// TODO9 : Effective java Item12 
 	public String printLine() {
-		// TODO use com.google.common.base.MoreObjects.toStringHelper
-		return "Employee{empId=1, empNo=2001-04-01}";
+		// TODO8  use com.google.common.base.MoreObjects.toStringHelper to implement this function
+		// Effective java Item 59
+		return "Employee{empId=999, empNo=2021-07-03}";
 	}
 
 }
