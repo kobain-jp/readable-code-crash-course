@@ -12,16 +12,14 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.ImmutableList;
 
-class MarkDownUtilsTest {
+class MarkDownUtilsWeekTwoTest {
 
 	@Test
-	@DisplayName("第一引数がnull")
+	@DisplayName("第一引数がnullの場合")
 	void testCreateTable_ColumnCaptionIsNull() {
-
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(null, 1);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			MarkDownUtilsWeekTwo.createEmptyTableWithHeader(null, 1);
 		});
-
 	}
 
 	@Test
@@ -29,7 +27,7 @@ class MarkDownUtilsTest {
 	void testCreateTable_ColumnCaptionIsEmpty() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(new ArrayList<String>(), 1);
+			MarkDownUtilsWeekTwo.createEmptyTableWithHeader(new ArrayList<String>(), 1);
 		});
 
 	}
@@ -39,11 +37,11 @@ class MarkDownUtilsTest {
 	void testCreateTable_EmptyRowCountIsZero() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(new ArrayList<String>(), 0);
+			MarkDownUtilsWeekTwo.createEmptyTableWithHeader(new ArrayList<String>(), 0);
 		});
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(new ArrayList<String>(), -1);
+			MarkDownUtilsWeekTwo.createEmptyTableWithHeader(new ArrayList<String>(), -1);
 		});
 
 	}
@@ -54,7 +52,7 @@ class MarkDownUtilsTest {
 
 		List<String> columnCaptions = ImmutableList.of("COL1");
 		int emptyRowCount = 1;
-		String actualMarkDownText = MarkDownUtils.createTables(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkDownUtilsWeekTwo.createEmptyTableWithHeader(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|" + System.lineSeparator();
 		String expectedSeparator = "|----|" + System.lineSeparator();
@@ -71,7 +69,7 @@ class MarkDownUtilsTest {
 
 		List<String> columnCaptions = ImmutableList.of("COL1", "COL2");
 		int emptyRowCount = 2;
-		String actualMarkDownText = MarkDownUtils.createTables(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkDownUtilsWeekTwo.createEmptyTableWithHeader(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|COL2|" + System.lineSeparator();
 		String expectedSeparator = "|----|----|" + System.lineSeparator();
