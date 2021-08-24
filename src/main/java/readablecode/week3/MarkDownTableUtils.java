@@ -8,9 +8,8 @@ public class MarkDownTableUtils {
 
 	// TODO9 : remove the comment and extract method to reduce the code steps in this method: should be less than 15 lines - readable code 11.4
 
-	// TODO10(IMO and you could skip it) : refactor the extracted method by removing StringBuilder Argument and return String
-	// in order to privent the potential problems as follows
-	// https://techacademy.jp/magazine/35137#sec5
+	// TODO10 : refactor the extracted method by removing StringBuilder Argument and return String
+	// https://cyzennt.co.jp/blog/2021/05/19/java%EF%BC%9A%E5%BC%95%E6%95%B0%E3%81%A7%E6%B8%A1%E3%81%97%E3%81%9F%E5%8F%82%E7%85%A7%E5%9E%8B%E5%A4%89%E6%95%B0%E3%82%92%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%86%85%E3%81%A7%E5%A4%89%E6%9B%B4/
 
 	// TODO11 : find more repeated code and refactor them hint:|caption1|caption2|
 	// you might need to create the method to create List which has caption for separator or brank column
