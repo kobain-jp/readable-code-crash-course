@@ -15,7 +15,7 @@ import com.google.common.collect.ImmutableList;
 class MarkDownUtilsTest {
 
 	@Test
-	@DisplayName("第一引数がnull")
+	@DisplayName("第一引数がnullの場合にIllegalArgumentException")
 	void testCreateTable_ColumnCaptionIsNull() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
@@ -25,7 +25,7 @@ class MarkDownUtilsTest {
 	}
 
 	@Test
-	@DisplayName("第一引数が空のリスト")
+	@DisplayName("第一引数が空のリストの場合にIllegalArgumentException")
 	void testCreateTable_ColumnCaptionIsEmpty() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
@@ -35,15 +35,18 @@ class MarkDownUtilsTest {
 	}
 
 	@Test
-	@DisplayName("第二引数が0以下")
+	@DisplayName("第一引数が要素を持つリストで第二引数が0以下の場合にIllegalArgumentException")
 	void testCreateTable_EmptyRowCountIsZero() {
 
+		List<String> captions = new ArrayList<String>();
+		captions.add("COL1");
+
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(new ArrayList<String>(), 0);
+			MarkDownUtils.createTables(captions, 0);
 		});
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(new ArrayList<String>(), -1);
+			MarkDownUtils.createTables(captions, -1);
 		});
 
 	}

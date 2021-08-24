@@ -15,35 +15,47 @@ import com.google.common.collect.ImmutableList;
 class MarkDownTableUtilsTest {
 
 	@Test
-	@DisplayName("第一引数がnullの場合")
+	@DisplayName("第一引数がnullの場合にNullPointerException")
 	void testCreateTable_ColumnCaptionIsNull() {
-		Assertions.assertThrows(NullPointerException.class, () -> {
+
+		String EXPECTED_ERROR_MSG = "headerCaptions must not be null";
+
+		Throwable exception = Assertions.assertThrows(NullPointerException.class, () -> {
 			MarkDownTableUtils.createEmptyTableWithHeader(null, 1);
 		});
+		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 	}
 
 	@Test
-	@DisplayName("第一引数が空のリスト")
+	@DisplayName("第一引数が空のリストの場合にIllegalArgumentException")
 	void testCreateTable_ColumnCaptionIsEmpty() {
 
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+		String EXPECTED_ERROR_MSG = "headerCaptions must have one more elements";
+
+		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
 			MarkDownTableUtils.createEmptyTableWithHeader(new ArrayList<String>(), 1);
 		});
-
+		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 	}
 
 	@Test
-	@DisplayName("第二引数が0以下")
+	@DisplayName("第一引数が要素を持つリスト かつ 第二引数が0以下の場合にIllegalArgumentException")
 	void testCreateTable_EmptyRowCountIsZero() {
 
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownTableUtils.createEmptyTableWithHeader(new ArrayList<String>(), 0);
+		String EXPECTED_ERROR_MSG = "emptyRowCount must be greater than or equal to 1";
+
+		List<String> headerCaptions = new ArrayList<String>();
+		headerCaptions.add("COL1");
+
+		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			MarkDownTableUtils.createEmptyTableWithHeader(headerCaptions, 0);
 		});
+		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownTableUtils.createEmptyTableWithHeader(new ArrayList<String>(), -1);
+			MarkDownTableUtils.createEmptyTableWithHeader(headerCaptions, -1);
 		});
-
+		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 	}
 
 	@Test
