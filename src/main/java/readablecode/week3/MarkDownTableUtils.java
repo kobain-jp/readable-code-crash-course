@@ -6,7 +6,7 @@ import java.util.Objects;
 public class MarkDownTableUtils {
 	// TODO8 : search DRY and OAOO on internet and find the code to use same method which you use
 
-	// TODO9 : remove the comment and extract method - readable code 11.4
+	// TODO9 : remove the comment and extract method to reduce the code steps in this method: should be less than 15 lines - readable code 11.4
 
 	// TODO10(IMO and you could skip it) : refactor the extracted method by removing StringBuilder Argument and return String
 	// in order to privent the potential problems as follows
@@ -28,7 +28,7 @@ public class MarkDownTableUtils {
 		}
 
 		StringBuilder markdownTable = new StringBuilder();
-		// create header
+		// create line for header captions
 		for (String e : headerCaptions) {
 			markdownTable.append("|");
 			markdownTable.append(e);
@@ -36,7 +36,7 @@ public class MarkDownTableUtils {
 		markdownTable.append("|");
 		markdownTable.append(System.lineSeparator());
 
-		// create separator
+		// create line for header separator
 		for (String e : headerCaptions) {
 			markdownTable.append("|");
 			// TODO7 : use com.google.common.base.Strings to replace your code : readable
@@ -49,7 +49,7 @@ public class MarkDownTableUtils {
 		markdownTable.append("|");
 		markdownTable.append(System.lineSeparator());
 
-		// create empty rows
+		// create lines for empty rows
 		for (int i = 0; i < emptyRowCount; i++) {
 			for (String e : headerCaptions) {
 				markdownTable.append("|");
