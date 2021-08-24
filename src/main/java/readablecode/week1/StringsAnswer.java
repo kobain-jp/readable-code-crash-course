@@ -1,4 +1,4 @@
-package ch7.sec5;
+package readablecode.week1;
 
 public final class StringsAnswer {
 

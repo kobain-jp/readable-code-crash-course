@@ -1,8 +1,8 @@
-package ch4.sec7;
+package readablecode.week2;
 
 import java.util.List;
 
-public class MarkDownUtilsWeekOne {
+public class MarkDownUtils {
 	// week1
 	// TODO1 : use early return:Readable code 7.5, 7.7 and remove the 1 nest(you
 	// might need to change if condition and if condition is complicated such as

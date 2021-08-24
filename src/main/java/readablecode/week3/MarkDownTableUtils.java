@@ -1,9 +1,9 @@
-package ch4.sec7;
+package readablecode.week3;
 
 import java.util.List;
 import java.util.Objects;
 
-public class MarkDownUtilsWeekTwo {
+public class MarkDownTableUtils {
 	// TODO8 : search DRY and OAOO on internet and find the code to use same method which you use
 
 	// TODO9 : remove the comment and extract method - readable code 11.4

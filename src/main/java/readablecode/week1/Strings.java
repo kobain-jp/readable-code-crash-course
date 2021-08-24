@@ -1,4 +1,4 @@
-package ch7.sec5;
+package readablecode.week1;
 
 // TODO 3: add more signature after you read effective java item 17 
 public class Strings {
