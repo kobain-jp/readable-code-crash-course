@@ -66,12 +66,11 @@ class MarkDownTableUtilsTest {
 		int emptyRowCount = 1;
 		String actualMarkDownText = MarkDownTableUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
-		String expectedHeader = "|Name|" + System.lineSeparator();
-		String expectedSeparator = "|----|" + System.lineSeparator();
-		String expectedRecoreds = "|    |" + System.lineSeparator();
-		String expectedMarkDownText = expectedHeader + expectedSeparator + expectedRecoreds;
+		String line1 = "|Name|" + System.lineSeparator();
+		String line2 = "|----|" + System.lineSeparator();
+		String line3 = "|    |" + System.lineSeparator();
 
-		assertThat(actualMarkDownText, is(expectedMarkDownText));
+		assertThat(actualMarkDownText, is(line1 + line2 + line3));
 
 	}
 
@@ -83,12 +82,12 @@ class MarkDownTableUtilsTest {
 		int emptyRowCount = 2;
 		String actualMarkDownText = MarkDownTableUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
-		String expectedHeader = "|Name|Quantity|" + System.lineSeparator();
-		String expectedSeparator = "|----|--------|" + System.lineSeparator();
-		String expectedRecoreds = "|    |        |" + System.lineSeparator() + "|    |        |"
-				+ System.lineSeparator();
+		String line1 = "|Name|Quantity|" + System.lineSeparator();
+		String line2 = "|----|--------|" + System.lineSeparator();
+		String line3 = "|    |        |" + System.lineSeparator();
+		String line4 = "|    |        |" + System.lineSeparator();
 
-		assertThat(actualMarkDownText, is(expectedHeader + expectedSeparator + expectedRecoreds));
+		assertThat(actualMarkDownText, is(line1 + line2 + line3 + line4));
 
 	}
 

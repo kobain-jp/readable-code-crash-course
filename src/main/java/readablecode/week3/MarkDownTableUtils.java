@@ -8,7 +8,7 @@ public class MarkDownTableUtils {
 	// refer DRY,OAOO concept
 
 	// TODO4 : extract method and remove the comment if the comment is unnecessary,
-	// readable code 11.4, 5.1
+	// 11.4, 5.1
 
 	// TODO5 : refactor the extracted method by removing StringBuilder Argument and
 	// return String
@@ -21,7 +21,7 @@ public class MarkDownTableUtils {
 	// 1. use createRow to replace your the code for header caption row
 	// 2. create adapter method for separator row and empty row in order to use
 	// createRow
-
+	
 	// TODO1 add @throws in javadoc
 	// e.g @throws xxxException if xxx is null or is less than XXX
 	/**
@@ -58,12 +58,18 @@ public class MarkDownTableUtils {
 		// create line for header row separator
 		for (String e : headerRowCaptions) {
 			markdownTable.append("|");
-			// TODO2 : use com.google.common.base.Strings to replace your code
-			// readable code 13.4
-			// https://guava.dev/releases/19.0/api/docs/com/google/common/base/Strings.html
+
+			// TODO2 : use com.google.common.base.Strings to replace the followings:13.4
+			// target code to replace with Strings begin
 			for (int i = 0; i < e.length(); i++) {
 				markdownTable.append("-");
 			}
+			// target code to replace with guava end
+			// how to find suitable method in framework
+			// 1.open {@link com.google.common.base.Strings} and check outline (control + o)
+			// and read javadoc
+			// 2.check junit TestCase on github
+
 		}
 		markdownTable.append("|");
 		markdownTable.append(System.lineSeparator());
