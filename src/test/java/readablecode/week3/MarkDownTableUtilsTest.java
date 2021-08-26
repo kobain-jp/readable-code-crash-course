@@ -62,11 +62,11 @@ class MarkDownTableUtilsTest {
 	@DisplayName("単数のカラムと値が空の行を1行を持つテーブル")
 	void testCreateEmptyTable_SingleColumnWithSingleEmptyRow() throws IllegalArgumentException {
 
-		List<String> columnCaptions = ImmutableList.of("COL1");
+		List<String> columnCaptions = ImmutableList.of("Name");
 		int emptyRowCount = 1;
 		String actualMarkDownText = MarkDownTableUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
-		String expectedHeader = "|COL1|" + System.lineSeparator();
+		String expectedHeader = "|Name|" + System.lineSeparator();
 		String expectedSeparator = "|----|" + System.lineSeparator();
 		String expectedRecoreds = "|    |" + System.lineSeparator();
 		String expectedMarkDownText = expectedHeader + expectedSeparator + expectedRecoreds;
@@ -79,13 +79,14 @@ class MarkDownTableUtilsTest {
 	@DisplayName("複数のカラムと値が空の行を複数行持つテーブル")
 	void testCreateEmptyTable_MultipleColumnWithMultipleEmptyRows() throws IllegalArgumentException {
 
-		List<String> columnCaptions = ImmutableList.of("COL1", "COL2");
+		List<String> columnCaptions = ImmutableList.of("Name", "Quantity");
 		int emptyRowCount = 2;
 		String actualMarkDownText = MarkDownTableUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
-		String expectedHeader = "|COL1|COL2|" + System.lineSeparator();
-		String expectedSeparator = "|----|----|" + System.lineSeparator();
-		String expectedRecoreds = "|    |    |" + System.lineSeparator() + "|    |    |" + System.lineSeparator();
+		String expectedHeader = "|Name|Quantity|" + System.lineSeparator();
+		String expectedSeparator = "|----|--------|" + System.lineSeparator();
+		String expectedRecoreds = "|    |        |" + System.lineSeparator() + "|    |        |"
+				+ System.lineSeparator();
 
 		assertThat(actualMarkDownText, is(expectedHeader + expectedSeparator + expectedRecoreds));
 
