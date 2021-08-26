@@ -1,10 +1,6 @@
 package readablecode.week1;
 
-public final class StringsAnswer {
-
-	private StringsAnswer() {
-
-	}
+public class StringsAnswer {
 
 	public static String capitalize(String str) {
 
