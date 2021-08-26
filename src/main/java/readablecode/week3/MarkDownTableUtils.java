@@ -19,8 +19,8 @@ public class MarkDownTableUtils {
 	// separator row and empty row and you crate method named createRow for creating
 	// text as |caption|caption|lineSeparator
 	// 1. use createRow to replace your the code for header caption row
-	// 2. create adapter method for separator row and empty row in order to use
-	// createRow
+	// 2. create adapter method as follows for separator row and empty row in order to use createRow
+	// private static List<String> createCaptionsReplacedByRepeatedChar(List<String> captions, String repeatedChar) {
 
 	// TODO1 add @throws in javadoc
 	// e.g @throws xxxException if xxx is null or is less than XXX
