@@ -14,12 +14,25 @@ public class MarkDownTableUtils {
 	// TODO11 : find more repeated code and refactor them hint:|caption1|caption2|
 	// you might need to create the method to create List which has caption for separator or brank column
 
-	// TODO6 : add javadoc for public method by typing /** and return key method and
-	// add @throws - Effective Java item 56
-	public static String createEmptyTableWithHeader(List<String> headerCaptions, int emptyRowCount) {
+	// TODO6 : add @throws in following javadoc 
+	/** 
+	 * Returns the string of table which has empty rows as Markdown table syntax.
+	 * For example, returns following if headerRowCaptions is [Name,Quantity] and emptyRowCount is 2
+	 * |Name|Quantity|
+	 * |----|--------|
+	 * |    |        |
+	 * |    |        | 
+	 * length of each caption for separator and empty cell is same with each header caption as above
+	 * 
+	 * @param headerRowCaptions  the captions for header row
+	 * @param emptyRowCount  the number of empty rows.
+	 * @return the string of table which has empty rows as Markdown table syntax.
+	 * 
+	 */
+	public static String createEmptyTable(List<String> headerRowCaptions, int emptyRowCount) {
 		// validate args
-		Objects.requireNonNull(headerCaptions, "headerCaptions must not be null");
-		if (headerCaptions.isEmpty()) {
+		Objects.requireNonNull(headerRowCaptions, "headerCaptions must not be null");
+		if (headerRowCaptions.isEmpty()) {
 			throw new IllegalArgumentException("headerCaptions must have one more elements");
 		}
 		if (emptyRowCount < 1) {
@@ -27,16 +40,16 @@ public class MarkDownTableUtils {
 		}
 
 		StringBuilder markdownTable = new StringBuilder();
-		// create line for header captions
-		for (String e : headerCaptions) {
+		// create line for header row captions
+		for (String e : headerRowCaptions) {
 			markdownTable.append("|");
 			markdownTable.append(e);
 		}
 		markdownTable.append("|");
 		markdownTable.append(System.lineSeparator());
 
-		// create line for header separator
-		for (String e : headerCaptions) {
+		// create line for header row separator
+		for (String e : headerRowCaptions) {
 			markdownTable.append("|");
 			// TODO7 : use com.google.common.base.Strings to replace your code : readable
 			// code 12.2 13.4
@@ -50,7 +63,7 @@ public class MarkDownTableUtils {
 
 		// create lines for empty rows
 		for (int i = 0; i < emptyRowCount; i++) {
-			for (String e : headerCaptions) {
+			for (String e : headerRowCaptions) {
 				markdownTable.append("|");
 				for (int j = 0; j < e.length(); j++) {
 					markdownTable.append(" ");

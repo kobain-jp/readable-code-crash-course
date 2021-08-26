@@ -16,31 +16,31 @@ class MarkDownTableUtilsTest {
 
 	@Test
 	@DisplayName("第一引数がnullの場合にNullPointerException")
-	void testCreateTable_ColumnCaptionIsNull() {
+	void testCreateEmptyTable_ColumnCaptionIsNull() {
 
 		String EXPECTED_ERROR_MSG = "headerCaptions must not be null";
 
 		Throwable exception = Assertions.assertThrows(NullPointerException.class, () -> {
-			MarkDownTableUtils.createEmptyTableWithHeader(null, 1);
+			MarkDownTableUtils.createEmptyTable(null, 1);
 		});
 		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 	}
 
 	@Test
 	@DisplayName("第一引数が空のリストの場合にIllegalArgumentException")
-	void testCreateTable_ColumnCaptionIsEmpty() {
+	void testCreateEmptyTable_ColumnCaptionIsEmpty() {
 
 		String EXPECTED_ERROR_MSG = "headerCaptions must have one more elements";
 
 		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownTableUtils.createEmptyTableWithHeader(new ArrayList<String>(), 1);
+			MarkDownTableUtils.createEmptyTable(new ArrayList<String>(), 1);
 		});
 		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 	}
 
 	@Test
 	@DisplayName("第一引数が要素を持つリスト かつ 第二引数が0以下の場合にIllegalArgumentException")
-	void testCreateTable_EmptyRowCountIsZero() {
+	void testCreateEmptyTable_EmptyRowCountIsZero() {
 
 		String EXPECTED_ERROR_MSG = "emptyRowCount must be greater than or equal to 1";
 
@@ -48,23 +48,23 @@ class MarkDownTableUtilsTest {
 		headerCaptions.add("COL1");
 
 		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownTableUtils.createEmptyTableWithHeader(headerCaptions, 0);
+			MarkDownTableUtils.createEmptyTable(headerCaptions, 0);
 		});
 		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownTableUtils.createEmptyTableWithHeader(headerCaptions, -1);
+			MarkDownTableUtils.createEmptyTable(headerCaptions, -1);
 		});
 		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
 	}
 
 	@Test
 	@DisplayName("単数のカラムと値が空の行を1行を持つテーブル")
-	void testCreateTable_SingleColumnWithSingleEmptyRow() throws IllegalArgumentException {
+	void testCreateEmptyTable_SingleColumnWithSingleEmptyRow() throws IllegalArgumentException {
 
 		List<String> columnCaptions = ImmutableList.of("COL1");
 		int emptyRowCount = 1;
-		String actualMarkDownText = MarkDownTableUtils.createEmptyTableWithHeader(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkDownTableUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|" + System.lineSeparator();
 		String expectedSeparator = "|----|" + System.lineSeparator();
@@ -77,11 +77,11 @@ class MarkDownTableUtilsTest {
 
 	@Test
 	@DisplayName("複数のカラムと値が空の行を複数行持つテーブル")
-	void testCreateTable_MultipleColumnWithMultipleEmptyRows() throws IllegalArgumentException {
+	void testCreateEmptyTable_MultipleColumnWithMultipleEmptyRows() throws IllegalArgumentException {
 
 		List<String> columnCaptions = ImmutableList.of("COL1", "COL2");
 		int emptyRowCount = 2;
-		String actualMarkDownText = MarkDownTableUtils.createEmptyTableWithHeader(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkDownTableUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|COL2|" + System.lineSeparator();
 		String expectedSeparator = "|----|----|" + System.lineSeparator();
