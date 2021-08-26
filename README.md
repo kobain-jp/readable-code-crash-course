@@ -31,7 +31,7 @@ Readable code
 week 1 : 7.5 7.7 9.1
 week 2 : 2.7 3.0 3.7 3.8 3.9 4.7 7.5 7.7 9.1 
 week 3 : 5.1 11.4 13.3 (DRY)
-week 4 : 7.1 7.3 8.1 8.2 5.2
+week 4 : 7.1 7.3 8.1 8.2 5.2 1.2
 
 Effective Java
 week 1 : 
