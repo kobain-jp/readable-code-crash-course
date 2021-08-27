@@ -14,17 +14,6 @@ public class MarkdownTableUtils {
 	// return String
 	// https://cyzennt.co.jp/blog/2021/05/19/java%EF%BC%9A%E5%BC%95%E6%95%B0%E3%81%A7%E6%B8%A1%E3%81%97%E3%81%9F%E5%8F%82%E7%85%A7%E5%9E%8B%E5%A4%89%E6%95%B0%E3%82%92%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%86%85%E3%81%A7%E5%A4%89%E6%9B%B4/
 
-	// TODO6 : find more duplicated codes and extract them and refactor them.
-	//
-	// hint1. logic of creating separator row and empty row are same except " " or "-"
-	// hint2. logic of creating header caption row and other has difference 
-	// 
-	// idea1. give up for make all creating row logic into one method and create two method for each
-	// idea2. make all creating row logic into one and use selector argument such as 
-	// idea3. use adapter method
-	//   1. use createRow which is existed in this class to replace your the code for header caption row
-	//   2. create adapter method for separator row and empty row in order to use createRow
-
 	// TODO1 add @throws in javadoc
 	// e.g @throws xxxException if xxx is null or is less than XXX
 	/**
