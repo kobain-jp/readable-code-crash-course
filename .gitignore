@@ -19,3 +19,4 @@ gradle-app.setting
 .project
 .settings/
 bin/
+.DS_Store
