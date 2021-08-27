@@ -12,14 +12,14 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.ImmutableList;
 
-class MarkDownUtilsTest {
+class MarkdownUtilsTest {
 
 	@Test
 	@DisplayName("第一引数がnullの場合にIllegalArgumentException")
 	void testCreateTable_ColumnCaptionIsNull() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(null, 1);
+			MarkdownUtils.createTables(null, 1);
 		});
 
 	}
@@ -29,7 +29,7 @@ class MarkDownUtilsTest {
 	void testCreateTable_ColumnCaptionIsEmpty() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(new ArrayList<String>(), 1);
+			MarkdownUtils.createTables(new ArrayList<String>(), 1);
 		});
 
 	}
@@ -42,11 +42,11 @@ class MarkDownUtilsTest {
 		captions.add("COL1");
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(captions, 0);
+			MarkdownUtils.createTables(captions, 0);
 		});
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkDownUtils.createTables(captions, -1);
+			MarkdownUtils.createTables(captions, -1);
 		});
 
 	}
@@ -57,7 +57,7 @@ class MarkDownUtilsTest {
 
 		List<String> columnCaptions = ImmutableList.of("COL1");
 		int emptyRowCount = 1;
-		String actualMarkDownText = MarkDownUtils.createTables(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkdownUtils.createTables(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|" + System.lineSeparator();
 		String expectedSeparator = "|----|" + System.lineSeparator();
@@ -74,7 +74,7 @@ class MarkDownUtilsTest {
 
 		List<String> columnCaptions = ImmutableList.of("COL1", "COL2");
 		int emptyRowCount = 2;
-		String actualMarkDownText = MarkDownUtils.createTables(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkdownUtils.createTables(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|COL2|" + System.lineSeparator();
 		String expectedSeparator = "|----|----|" + System.lineSeparator();

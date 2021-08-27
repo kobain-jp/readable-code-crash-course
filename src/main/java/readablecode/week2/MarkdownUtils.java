@@ -2,7 +2,7 @@ package readablecode.week2;
 
 import java.util.List;
 
-public class MarkDownUtils {
+public class MarkdownUtils {
 	// TODO1 : use early return:Readable code 7.5, 7.7 and remove the 1 nest(you
 	// might need to change if condition and if condition is complicated such as
 	// if(!(...)) please refactor it after you read 7.2)

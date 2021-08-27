@@ -1,4 +1,4 @@
-package readablecode.week3;
+package readablecode.week4;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

@@ -3,7 +3,7 @@ package readablecode.week3;
 import java.util.List;
 import java.util.Objects;
 
-public class MarkDownTableUtils {
+public class MarkdownTableUtils {
 	// TODO3 : find the code to be replace with the method used at TODO7
 	// refer DRY,OAOO concept
 
