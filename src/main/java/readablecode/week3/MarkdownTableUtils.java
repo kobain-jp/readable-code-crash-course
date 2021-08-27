@@ -82,8 +82,4 @@ public class MarkdownTableUtils {
 
 	}
 
-	private static String createRow(List<String> captions) {
-		return "|" + String.join("|", captions) + "|" + System.lineSeparator();
-	}
-
 }
