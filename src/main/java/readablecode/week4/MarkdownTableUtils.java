@@ -45,10 +45,11 @@ public class MarkdownTableUtils {
 			throw new IllegalArgumentException("emptyRowCount must be greater than or equal to 1");
 		}
 
-		String headerRows = createHeaderRows(headerRowCaptions);
+		String headerRow = createHeaderRow(headerRowCaptions);
+		String separatorRow = createSeparatorRow(headerRowCaptions);
 		String emptyRows = createEmptyRows(headerRowCaptions, emptyRowCount);
 
-		return headerRows + emptyRows;
+		return headerRow + separatorRow + emptyRows;
 
 	}
 
@@ -65,8 +66,7 @@ public class MarkdownTableUtils {
 		return markdownTable.toString();
 	}
 
-	private static String createHeaderRows(List<String> headerRowCaptions) {
-		// create line for header row captions
+	private static String createHeaderRow(List<String> headerRowCaptions) {
 		StringBuilder markdownTable = new StringBuilder();
 		for (String e : headerRowCaptions) {
 			markdownTable.append("|");
@@ -74,8 +74,11 @@ public class MarkdownTableUtils {
 		}
 		markdownTable.append("|");
 		markdownTable.append(System.lineSeparator());
+		return markdownTable.toString();
+	}
 
-		// create line for header row separator
+	private static String createSeparatorRow(List<String> headerRowCaptions) {
+		StringBuilder markdownTable = new StringBuilder();
 		for (String e : headerRowCaptions) {
 			markdownTable.append("|");
 			markdownTable.append(Strings.repeat("-", e.length()));
@@ -83,6 +86,7 @@ public class MarkdownTableUtils {
 		}
 		markdownTable.append("|");
 		markdownTable.append(System.lineSeparator());
+
 		return markdownTable.toString();
 	}
 
