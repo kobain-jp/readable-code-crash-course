@@ -1,11 +1,11 @@
-package readablecode.week4;
+package readablecode.week5.explanatoryvariable;
 
 import java.util.List;
 import java.util.Objects;
 
 import com.google.common.base.Strings;
 
-public class MarkdownTableUtilsAnswerIdea2 {
+public class MarkdownTableUtils {
 
 	private static final String PIPE = "|";
 	private static final String HYPHEN = "-";
@@ -36,20 +36,16 @@ public class MarkdownTableUtilsAnswerIdea2 {
 			throw new IllegalArgumentException("emptyRowCount must be greater than or 0");
 		}
 
-		String headerRow = createHeaderRow(headerRowCaptions);
-		String separatorRow = createSeparatorRow(headerRowCaptions);
+		String headerRows = createHeaderRows(headerRowCaptions);
 		String emptyRows = createEmptyRows(headerRowCaptions, emptyRowCount);
-
-		return headerRow + separatorRow + emptyRows;
+		//TODO2 : the above are explanatory variables and think the above is useful or not : 8.1
+		return headerRows + emptyRows;
 
 	}
 
-	private static String createHeaderRow(List<String> captions) {
-		return convertCaptionAndCreateRow(captions, false, null);
-	}
-
-	private static String createSeparatorRow(List<String> captions) {
-		return convertCaptionAndCreateRow(captions, true, HYPHEN);
+	private static String createHeaderRows(List<String> captions) {
+		//TODO3 : use explanatory variable for following line : 8.1
+		return convertCaptionAndCreateRow(captions, false, null) + convertCaptionAndCreateRow(captions, true, HYPHEN);
 	}
 
 	private static String createEmptyRows(List<String> captions, int emptyRowCount) {

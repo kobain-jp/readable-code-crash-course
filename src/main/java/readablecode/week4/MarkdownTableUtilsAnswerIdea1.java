@@ -37,11 +37,11 @@ public class MarkdownTableUtilsAnswerIdea1 {
 			throw new IllegalArgumentException("emptyRowCount must be greater than or 0");
 		}
 
-		String headerRows = createHeaderRows(headerRowCaptions);
+		String headerRow = createHeaderRows(headerRowCaptions);
 		String separatorRow = createSeparatorRow(headerRowCaptions);
 		String emptyRows = createEmptyRows(headerRowCaptions, emptyRowCount);
 
-		return headerRows + separatorRow + emptyRows;
+		return headerRow + separatorRow + emptyRows;
 
 	}
 
