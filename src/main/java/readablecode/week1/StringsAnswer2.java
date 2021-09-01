@@ -8,7 +8,7 @@ public class StringsAnswer2 {
 			return str;
 		}
 
-		// it work but not readable
+		// it work but not readable because reader might not know 'str.substring(1)' return ""
 		return str.substring(0, 1).toUpperCase() + str.substring(1);
 
 	}
