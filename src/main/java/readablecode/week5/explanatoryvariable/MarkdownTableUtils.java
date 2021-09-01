@@ -38,13 +38,13 @@ public class MarkdownTableUtils {
 
 		String headerRows = createHeaderRows(headerRowCaptions);
 		String emptyRows = createEmptyRows(headerRowCaptions, emptyRowCount);
-		//TODO2 : the above are explanatory variables and think the above is useful or not : 8.1
+		//TODO3 : the above are explanatory variables and think the above is useful or not : 8.1
 		return headerRows + emptyRows;
 
 	}
 
 	private static String createHeaderRows(List<String> captions) {
-		//TODO3 : use explanatory variable for following line : 8.1
+		//TODO2 : use explanatory variable for following line : 8.1
 		return convertCaptionAndCreateRow(captions, false, null) + convertCaptionAndCreateRow(captions, true, HYPHEN);
 	}
 
