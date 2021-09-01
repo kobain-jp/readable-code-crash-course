@@ -39,6 +39,7 @@ Target Sections
 11.4 
 12.2 
 13.3 13.4
+14.5 14.6
 15.2 15.3
 
 Target Sections by week
