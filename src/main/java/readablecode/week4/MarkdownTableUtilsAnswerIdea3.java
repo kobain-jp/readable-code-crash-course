@@ -60,6 +60,15 @@ public class MarkdownTableUtilsAnswerIdea3 {
 
 	}
 
+	// idea3 
+	// セパレータと空白行の処理の仕方を変更することにより、createRowを利用する
+	// 元のロジック
+	// SringBuilderに|をアペンド -> headerRowCaptionsから一つ取り出しStrings.repeatでアペンドする値を作成し、アペンド 
+	// SringBuilderに|をアペンド
+	// 処理の仕方を変更
+	// headerRowCaptionsをもとにList<String> separatorCaptions/emptyCaptionsを作成する:createCaptionsReplacedByRepeatedChar
+	// 作成したseparatorCaptions/emptyCaptionsをcreateRowに渡す
+	// ループ回数が増えるので時と場合により採用すべき
 	private static String createRow(List<String> captions) {
 		return PIPE + String.join(PIPE, captions) + PIPE + System.lineSeparator();
 	}
