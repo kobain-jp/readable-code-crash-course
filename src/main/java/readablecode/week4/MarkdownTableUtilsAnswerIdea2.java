@@ -63,6 +63,8 @@ public class MarkdownTableUtilsAnswerIdea2 {
 	// Anti pattern
 	// https://moderatemisbehaviour.github.io/clean-code-smells-and-heuristics/general/g15-selector-arguments.html
 	// createRow(captions, false, null); hard to understand what is false and null
+	
+	// for header row,separator row and empty row
 	private static String convertCaptionAndCreateRow(List<String> captions, boolean shouldReplaceWithRepeatedCaption,
 			String repeatedChar) {
 		StringBuilder row = new StringBuilder();

@@ -57,10 +57,12 @@ public class MarkdownTableUtilsAnswerIdea1 {
 		return Strings.repeat(createRowByRepeatedChar(headerRowCaptions, SPACE), emptyRowCount);
 	}
 
+	// for headerRow
 	private static String createRow(List<String> captions) {
 		return PIPE + String.join(PIPE, captions) + PIPE + System.lineSeparator();
 	}
-
+	
+	// for separatorRow and Empty Row
 	private static String createRowByRepeatedChar(List<String> headerRowCaptions, String repeatedChar) {
 		StringJoiner row = new StringJoiner(PIPE, PIPE, PIPE + System.lineSeparator());
 		for (String caption : headerRowCaptions) {

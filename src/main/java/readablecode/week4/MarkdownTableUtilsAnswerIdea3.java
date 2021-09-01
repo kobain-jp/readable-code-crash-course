@@ -64,6 +64,7 @@ public class MarkdownTableUtilsAnswerIdea3 {
 		return PIPE + String.join(PIPE, captions) + PIPE + System.lineSeparator();
 	}
 
+	//adapter method for separator row and empty row to use createRow
 	private static List<String> createCaptionsReplacedByRepeatedChar(List<String> captions, String repeatedChar) {
 		return captions.stream().map(caption -> Strings.repeat(repeatedChar, caption.length())).collect(Collectors.toList());
 
