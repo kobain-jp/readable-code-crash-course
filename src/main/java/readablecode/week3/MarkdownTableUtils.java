@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class MarkdownTableUtils {
 	// TODO3 : find the code to be replace with the method used at TODO7
-	// refer DRY,OAOO concept
+	// refer OAOO principal
 
 	// TODO4 : extract method and remove the comment if the comment is unnecessary,
 	// 11.4, 5.1
