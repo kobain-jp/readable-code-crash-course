@@ -24,10 +24,9 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 
 if junit result shows with green bar, setup is succeeded
 
-### crash course
+### Readable code 
 
 ```
-Readable code 
 1.1 1.2 1.3 1.4 1.5
 2.7
 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 
@@ -47,6 +46,6 @@ week 3 : 5.1 11.4 13.3 13.4 DRY OAOO
 week 4 : DRY OAOO
 week 5 : 3.1 3.2 3.3 3.4 3.5 3.6 3.7 
 
-Effective Java
-week 1 : 
 ```
+
+### Effective Java
