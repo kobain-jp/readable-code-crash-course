@@ -58,7 +58,7 @@ public class MarkdownTableUtilsAnswerIdea1 {
 	}
 
 	// idea1
-	// 3つを以下に分類する
+	// 3つを2つに分類する
 	// headerRow:createRow ：| -> 配列の値 -> | -> 配列の値 -> | -> 改行
 	// separatorRow and Empty Row :createRowByRepeatedChar：| -> 配列の値の長さをもとに値作成 -> |
 	// -> 配列の値の長さをもとに値作成 -> | -> 改行

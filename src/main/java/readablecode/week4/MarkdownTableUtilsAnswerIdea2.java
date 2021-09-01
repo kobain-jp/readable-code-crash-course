@@ -60,6 +60,8 @@ public class MarkdownTableUtilsAnswerIdea2 {
 		return emptyRows.toString();
 	}
 
+	// idea2
+	// 3つを1つのメソッドに統合して、セレクタ引数で処理を分岐する
 	// Anti pattern
 	// https://moderatemisbehaviour.github.io/clean-code-smells-and-heuristics/general/g15-selector-arguments.html
 	// createRow(captions, false, null); hard to understand what is false and null

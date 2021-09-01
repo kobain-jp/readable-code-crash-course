@@ -68,7 +68,7 @@ public class MarkdownTableUtilsAnswerIdea3 {
 	// 処理の仕方を変更
 	// headerRowCaptionsをもとにList<String> separatorCaptions/emptyCaptionsを作成する:createCaptionsReplacedByRepeatedChar
 	// 作成したseparatorCaptions/emptyCaptionsをcreateRowに渡す
-	// ループ回数が増えるので時と場合により採用すべき
+	// ループ回数が増えるので処理速度は遅くなるが、機能の仕様により可読性、保守性、処理速度のバランスを検討する必要あり
 	private static String createRow(List<String> captions) {
 		return PIPE + String.join(PIPE, captions) + PIPE + System.lineSeparator();
 	}
