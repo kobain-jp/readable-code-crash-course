@@ -32,7 +32,7 @@ Readable code
 
 week 1 : 7.5 7.7 9.1
 week 2 : 2.7 3.0 3.8 3.9 4.7 7.2 7.5 7.7 9.1 
-week 3 : 5.1 11.4 13.4 (DRY)
+week 3 : 5.1 11.4 13.4 DRY OAOO
 week 4 : DRY OAOO
 week 5 : 3.1 3.2 3.3 3.4 3.5 3.6 3.7 
 
