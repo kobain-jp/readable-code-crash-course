@@ -18,7 +18,7 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 3. Check your setup by lauching junit
 
 ```
-1.select ch7.sec5.StringTest
+1.select src/test/java/readablecode/week1/StringTest
 2.right click and run as junit Test
 ```
 
