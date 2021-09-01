@@ -23,5 +23,8 @@ public class Employee {
 		// Effective java Item 59
 		return "Employee{empId=999, empNo=2021-07-03}";
 	}
+	
+	// TODO10 : implement equals java Item10
+	// TODO11 : implement hashcode Java Item  Effective java Item11
 
 }
