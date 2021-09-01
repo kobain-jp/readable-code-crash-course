@@ -24,7 +24,7 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 
 if junit result shows with green bar, setup is succeeded
 
-### Readable code 
+### Readable Code 
 
 ```
 Target Sections
@@ -40,12 +40,14 @@ Target Sections
 12.2 
 13.3 13.4
 
+*OAOO and DRY are not from Readable Code.
+
 Target Sections by week
 Week 0 : 1.1 1.2 1.3 1.4 1.5
 week 1 : 7.5 7.7 9.1
 week 2 : 2.7 3.0 3.8 3.9 4.7 7.2 7.5 7.7 9.1 
-week 3 : 5.1 11.4 13.3 13.4 DRY OAOO
-week 4 : DRY OAOO
+week 3 : 5.1 11.4 13.3 13.4 OAOO(DRY)
+week 4 : OAOO(DRY)
 week 5 : 3.1 3.2 3.3 3.4 3.5 3.6 3.7 
 
 ```
