@@ -4,6 +4,13 @@
 メソッド名
 https://qiita.com/KeithYokoma/items/2193cf79ba76563e3db6
 
+DAO関連のメソッド名
+
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.core-concepts
+
+*DAOにgetを利用されるコードも昔よくあるが、いつしかfindの方が一般的に。getがクラス内の変数を提供するイメージなので、混同しないようにかも
+
+
 クラス名
 https://qiita.com/KeithYokoma/items/ee21fec6a3ebb5d1e9a8
 
