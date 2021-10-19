@@ -20,10 +20,12 @@ class MarkdownTableUtilsTest {
 
 		String EXPECTED_ERROR_MSG = "headerCaptions must not be null";
 
-		Throwable exception = Assertions.assertThrows(NullPointerException.class, () -> {
+		try {
 			MarkdownTableUtils.createEmptyTable(null, 1);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
+			Assertions.fail("NullPointerExceptionがスローされていません");
+		} catch (NullPointerException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
 	}
 
 	@Test
@@ -32,10 +34,12 @@ class MarkdownTableUtilsTest {
 
 		String EXPECTED_ERROR_MSG = "headerCaptions must have one more elements";
 
-		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+		try {
 			MarkdownTableUtils.createEmptyTable(new ArrayList<String>(), 1);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
+			Assertions.fail("IllegalArgumentExceptionがスローされていません");
+		} catch (IllegalArgumentException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
 	}
 
 	@Test
@@ -47,15 +51,19 @@ class MarkdownTableUtilsTest {
 		List<String> headerCaptions = new ArrayList<String>();
 		headerCaptions.add("COL1");
 
-		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+		try {
 			MarkdownTableUtils.createEmptyTable(headerCaptions, 0);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
-
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			Assertions.fail("IllegalArgumentExceptionがスローされていません");
+		} catch (IllegalArgumentException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
+		
+		try {
 			MarkdownTableUtils.createEmptyTable(headerCaptions, -1);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
+			Assertions.fail("IllegalArgumentExceptionがスローされていません");
+		} catch (IllegalArgumentException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
 	}
 
 	@Test
