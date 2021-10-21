@@ -9,6 +9,8 @@ import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import com.google.common.collect.ImmutableList;
 
@@ -34,21 +36,16 @@ class MarkdownUtilsTest {
 
 	}
 
-	@Test
-	@DisplayName("第一引数が要素を持つリストで第二引数が0以下の場合にIllegalArgumentException")
-	void testCreateTable_EmptyRowCountIsZero() {
+	@ParameterizedTest(name = "第一引数が要素を持つリストで第二引数が0以下の場合にIllegalArgumentException")
+	@ValueSource(ints = {0, -1})
+	void testCreateTable_EmptyRowCountIsZero(int arg) {
 
 		List<String> captions = new ArrayList<String>();
 		captions.add("COL1");
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownUtils.createTables(captions, 0);
+			MarkdownUtils.createTables(captions, arg);
 		});
-
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownUtils.createTables(captions, -1);
-		});
-
 	}
 
 	@Test

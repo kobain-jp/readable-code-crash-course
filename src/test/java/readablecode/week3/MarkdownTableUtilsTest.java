@@ -9,6 +9,8 @@ import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import com.google.common.collect.ImmutableList;
 
@@ -42,9 +44,9 @@ class MarkdownTableUtilsTest {
 		}
 	}
 
-	@Test
-	@DisplayName("第一引数が要素を持つリスト かつ 第二引数が0以下の場合にIllegalArgumentException")
-	void testCreateEmptyTable_EmptyRowCountIsZero() {
+	@ParameterizedTest(name = "第一引数が要素を持つリスト かつ 第二引数が0以下の場合にIllegalArgumentException")
+	@ValueSource(ints = {0, -1})
+	void testCreateEmptyTable_EmptyRowCountIsZero(int arg) {
 
 		String EXPECTED_ERROR_MSG = "emptyRowCount must be greater than or equal to 1";
 
@@ -52,14 +54,7 @@ class MarkdownTableUtilsTest {
 		headerCaptions.add("COL1");
 
 		try {
-			MarkdownTableUtils.createEmptyTable(headerCaptions, 0);
-			Assertions.fail("IllegalArgumentExceptionがスローされていません");
-		} catch (IllegalArgumentException e) {
-			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
-		}
-		
-		try {
-			MarkdownTableUtils.createEmptyTable(headerCaptions, -1);
+			MarkdownTableUtils.createEmptyTable(headerCaptions, arg);
 			Assertions.fail("IllegalArgumentExceptionがスローされていません");
 		} catch (IllegalArgumentException e) {
 			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
@@ -100,3 +95,4 @@ class MarkdownTableUtilsTest {
 	}
 
 }
+//---—
