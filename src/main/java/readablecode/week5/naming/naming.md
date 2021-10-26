@@ -19,8 +19,8 @@ https://qiita.com/KeithYokoma/items/ee21fec6a3ebb5d1e9a8
 e.g
 
 ```
-bad　userNameとpassworのマッチングのみならずsessionを作成している
-boolean auth(String userName,String passwrod){
+bad : userNameとpasswordのマッチングのみならずsessionを作成している
+boolean auth(String userName,String password){
 	//userNameとpasswordを照合
 	//正しければsessionを作成する <-- authの名前以上のこと
 }	
