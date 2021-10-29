@@ -9,6 +9,8 @@ import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import com.google.common.collect.ImmutableList;
 
@@ -20,10 +22,12 @@ class MarkdownTableUtilsTest {
 
 		String EXPECTED_ERROR_MSG = "headerCaptions must not be null";
 
-		Throwable exception = Assertions.assertThrows(NullPointerException.class, () -> {
+		try {
 			MarkdownTableUtils.createEmptyTable(null, 1);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
+			Assertions.fail("NullPointerExceptionがスローされていません");
+		} catch (NullPointerException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
 	}
 
 	@Test
@@ -32,30 +36,29 @@ class MarkdownTableUtilsTest {
 
 		String EXPECTED_ERROR_MSG = "headerCaptions must have one more elements";
 
-		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+		try {
 			MarkdownTableUtils.createEmptyTable(new ArrayList<String>(), 1);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
+			Assertions.fail("IllegalArgumentExceptionがスローされていません");
+		} catch (IllegalArgumentException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
 	}
 
-	@Test
-	@DisplayName("第一引数が要素を持つリスト かつ 第二引数が0以下の場合にIllegalArgumentException")
-	void testCreateEmptyTable_EmptyRowCountIsZero() {
+	@ParameterizedTest(name = "第一引数が要素を持つリスト かつ 第二引数が0以下の場合にIllegalArgumentException")
+	@ValueSource(ints = {0, -1})
+	void testCreateEmptyTable_EmptyRowCountIsZero(int arg) {
 
 		String EXPECTED_ERROR_MSG = "emptyRowCount must be greater than or equal to 1";
 
 		List<String> headerCaptions = new ArrayList<String>();
 		headerCaptions.add("COL1");
 
-		Throwable exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownTableUtils.createEmptyTable(headerCaptions, 0);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
-
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownTableUtils.createEmptyTable(headerCaptions, -1);
-		});
-		assertThat(exception.getMessage(), is(EXPECTED_ERROR_MSG));
+		try {
+			MarkdownTableUtils.createEmptyTable(headerCaptions, arg);
+			Assertions.fail("IllegalArgumentExceptionがスローされていません");
+		} catch (IllegalArgumentException e) {
+			assertThat(e.getMessage(), is(EXPECTED_ERROR_MSG));
+		}
 	}
 
 	@Test
@@ -92,3 +95,4 @@ class MarkdownTableUtilsTest {
 	}
 
 }
+//---—

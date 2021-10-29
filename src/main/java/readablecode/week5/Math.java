@@ -2,7 +2,7 @@ package readablecode.week5;
 
 public class Math {
 
-	// TODO1 7.4 which way do you prefer between 1 and 2
+	// TODO1 7.1 which way do you prefer between 1 and 2
 	public boolean isNagativeValue1(int value) {
 		if (0 > value) {
 			return true;
@@ -19,7 +19,7 @@ public class Math {
 		}
 	}
 
-	// TODO2 7.4 which way do you prefer between 1, 3 and 4
+	// TODO2 7.1 which way do you prefer between 1, 3 and 4
 	public boolean isNagativeValue3(int value) {
 		// TODO2 7.3
 		return 0 == value ? true : false;
