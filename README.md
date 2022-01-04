@@ -52,5 +52,3 @@ week 5 : 3.1 3.2 3.3 3.4 3.5 3.6 3.7 5.2 5.3 14.5 14.6
 *OAOO is not from Readable Code.
 https://wiki.c2.com/?OnceAndOnlyOnce
 ```
-
-### Effective Java
