@@ -14,7 +14,8 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 1.select File > Import 
 2.select Gradle > Existing Gradle Project and click Next
 3.click Next
-4.check override workspace settings and specify java home if Java home is empty
+4.check override workspace settings and specify Java home if Java home is empty
+*Java8 is recommended
 5.click Finish
 
 ```
