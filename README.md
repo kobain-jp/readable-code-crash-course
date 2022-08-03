@@ -25,7 +25,7 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 ```
 1.select src/test/java/readablecode/week1/StringTest
 2.right click and run as junit Test
-*if run as junit Test does not show, add JUnit5 from BuildPath 
+*if run as junit Test does not show, add JUnit5 from BuildPath and restart eclipse
 ```
 
 if junit result shows with green bar, setup is succeeded
