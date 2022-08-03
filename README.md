@@ -12,7 +12,11 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 
 ```
 1.select File > Import 
-2.select Gradle > Existing Gradle Project and click Next and Finish
+2.select Gradle > Existing Gradle Project and click Next
+3.click Next
+4.check override workspace settings and specify java home if Java home is empty
+5.click Finish
+
 ```
 
 3. Check your setup by lauching junit
@@ -20,6 +24,7 @@ git clone https://github.com/kobain-jp/readable-code-crash-course.git
 ```
 1.select src/test/java/readablecode/week1/StringTest
 2.right click and run as junit Test
+*if run as junit Test does not show, add JUnit5 from BuildPath 
 ```
 
 if junit result shows with green bar, setup is succeeded
