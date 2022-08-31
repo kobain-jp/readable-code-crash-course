@@ -15,7 +15,7 @@ public class StringBuilderPerformanceExperiment {
 
 		long startTimeMills = System.currentTimeMillis();
 
-		StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder();  // ddddd
 		for (int i = 0; i < lengthOfString; i++) {
 			sb.append(S1);
 		}
@@ -40,7 +40,7 @@ public class StringBuilderPerformanceExperiment {
 		System.out.println(endTimeMills - startTimeMills);
 
 	}
-	
-	
+
+
 
 }
