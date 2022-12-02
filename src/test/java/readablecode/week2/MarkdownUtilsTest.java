@@ -1,7 +1,7 @@
 package readablecode.week2;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ class MarkdownUtilsTest {
 	void testCreateTable_ColumnCaptionIsNull() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownUtils.createTables(null, 1);
+			MarkdownUtils.createEmptyTable(null, 1);
 		});
 
 	}
@@ -31,7 +31,7 @@ class MarkdownUtilsTest {
 	void testCreateTable_ColumnCaptionIsEmpty() {
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownUtils.createTables(new ArrayList<String>(), 1);
+			MarkdownUtils.createEmptyTable(new ArrayList<String>(), 1);
 		});
 
 	}
@@ -44,7 +44,7 @@ class MarkdownUtilsTest {
 		captions.add("COL1");
 
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			MarkdownUtils.createTables(captions, arg);
+			MarkdownUtils.createEmptyTable(captions, arg);
 		});
 	}
 
@@ -54,7 +54,7 @@ class MarkdownUtilsTest {
 
 		List<String> columnCaptions = ImmutableList.of("COL1");
 		int emptyRowCount = 1;
-		String actualMarkDownText = MarkdownUtils.createTables(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkdownUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|" + System.lineSeparator();
 		String expectedSeparator = "|----|" + System.lineSeparator();
@@ -71,7 +71,7 @@ class MarkdownUtilsTest {
 
 		List<String> columnCaptions = ImmutableList.of("COL1", "COL2");
 		int emptyRowCount = 2;
-		String actualMarkDownText = MarkdownUtils.createTables(columnCaptions, emptyRowCount);
+		String actualMarkDownText = MarkdownUtils.createEmptyTable(columnCaptions, emptyRowCount);
 
 		String expectedHeader = "|COL1|COL2|" + System.lineSeparator();
 		String expectedSeparator = "|----|----|" + System.lineSeparator();
